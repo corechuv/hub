@@ -5,6 +5,12 @@ import facebookIcon from './assets/social/facebook_white_opt.png?inline'
 import youtubeIcon from './assets/social/youtube_white_opt.png?inline'
 import tiktokIcon from './assets/social/tiktok_white_opt.png?inline'
 import whatsappIcon from './assets/social/whatsapp_white.svg?inline'
+import academyLogo from './assets/logos/academy.PNG'
+import devicesLogo from './assets/logos/devices.PNG'
+import forLifeLogo from './assets/logos/for_life.PNG'
+import infoCenterLogo from './assets/logos/info_center.PNG'
+import storeLogo from './assets/logos/store.PNG'
+import supportLogo from './assets/logos/support.PNG'
 import type {
   AreaConfig,
   LanguageCode,
@@ -180,6 +186,17 @@ const SOCIAL_LINKS = [
     icon: whatsappIcon,
   },
 ] as const
+
+const EXPERIENCE_SIDE_LOGOS: Partial<
+  Record<AreaConfig['key'], { label: string; src: string }>
+> = {
+  booking: { label: 'MIRA Info Center', src: infoCenterLogo },
+  academy: { label: 'MIRA Academy', src: academyLogo },
+  devices: { label: 'MIRA Devices', src: devicesLogo },
+  shop: { label: 'MIRA Store', src: storeLogo },
+  ai: { label: 'MIRA Support', src: supportLogo },
+  charity: { label: 'MIRA For Life', src: forLifeLogo },
+}
 
 const LEGAL_DETAILS = {
   company: readValue(import.meta.env.VITE_LEGAL_COMPANY, 'CENTER MIRA'),
@@ -1030,7 +1047,6 @@ function App() {
 
   useEffect(() => {
     if (!isHomePage) {
-      setCablePath('')
       return
     }
 
@@ -1535,27 +1551,44 @@ function App() {
         </section>
 
         <section className="experience-grid" id="core">
-          {areas.map((item, index) => (
-            <article
-              key={item.key}
-              className={`experience-card experience-card--${item.key}`}
-              ref={(node) => {
-                cardRefs.current[item.key] = node
-              }}
-            >
-              <span className="experience-card__index">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <div className="experience-card__content">
-                <img className="experience-card__logo" src="/logo_full.png" alt="MIRA logo" />
-                <h2 className="experience-card__title">{item.title}</h2>
-                <span className="experience-card__text">{item.text}</span>
-                <a className="pill-link pill-link--ghost" href={item.href}>
-                  {item.cta}
-                </a>
-              </div>
-            </article>
-          ))}
+          {areas.map((item, index) => {
+            const sideLogo = EXPERIENCE_SIDE_LOGOS[item.key]
+
+            return (
+              <article
+                key={item.key}
+                className={`experience-card experience-card--${item.key}${
+                  sideLogo ? ' experience-card--with-feature-logo' : ''
+                }`}
+                ref={(node) => {
+                  cardRefs.current[item.key] = node
+                }}
+              >
+                <span className="experience-card__index">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+
+                <div className="experience-card__content">
+                  <h2 className="experience-card__title">{item.title}</h2>
+                  <span className="experience-card__text">{item.text}</span>
+                  <a className="pill-link pill-link--ghost" href={item.href}>
+                    {item.cta}
+                  </a>
+                </div>
+
+                {sideLogo ? (
+                  <span className="experience-card__feature-logo" aria-hidden="true">
+                    <img
+                      src={sideLogo.src}
+                      alt=""
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </span>
+                ) : null}
+              </article>
+            )
+          })}
         </section>
 
         <nav className="landing-social" aria-label={copy.footer.socialAria}>

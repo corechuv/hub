@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://center-mira.com/?lang=ru</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://center-mira.com/?lang=uk</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://center-mira.com/?lang=de</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://center-mira.com/?lang=en</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+
+  <url><loc>https://center-mira.com/impressum?lang=ru</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://center-mira.com/impressum?lang=uk</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://center-mira.com/impressum?lang=de</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://center-mira.com/impressum?lang=en</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://center-mira.com/privacy?lang=ru</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://center-mira.com/privacy?lang=uk</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://center-mira.com/privacy?lang=de</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://center-mira.com/privacy?lang=en</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://center-mira.com/sitemap?lang=ru</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://center-mira.com/sitemap?lang=uk</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://center-mira.com/sitemap?lang=de</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://center-mira.com/sitemap?lang=en</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+</urlset>

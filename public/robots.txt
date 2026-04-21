@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://center-mira.com/sitemap.xml
+Host: center-mira.com

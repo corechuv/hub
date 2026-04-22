@@ -5,12 +5,14 @@ import facebookIcon from './assets/social/facebook_white_opt.png?inline'
 import youtubeIcon from './assets/social/youtube_white_opt.png?inline'
 import tiktokIcon from './assets/social/tiktok_white_opt.png?inline'
 import whatsappIcon from './assets/social/whatsapp_white.svg?inline'
-import academyLogo from './assets/logos/academy.PNG'
-import devicesLogo from './assets/logos/devices.PNG'
-import forLifeLogo from './assets/logos/for_life.PNG'
-import infoCenterLogo from './assets/logos/info_center.PNG'
-import storeLogo from './assets/logos/store.PNG'
-import supportLogo from './assets/logos/support.PNG'
+import academyLogo from './assets/logos/academy.png'
+import devicesLogo from './assets/logos/devices.png'
+import forLifeLogo from './assets/logos/for_life.png'
+import infoCenterLogo from './assets/logos/info_center.png'
+import mainLogo from './assets/logos/m.png'
+import storeLogo from './assets/logos/store.png'
+import studioLogo from './assets/logos/studio.png'
+import supportLogo from './assets/logos/support.png'
 import type {
   AreaConfig,
   LanguageCode,
@@ -192,6 +194,7 @@ const SOCIAL_LINKS = [
 const EXPERIENCE_SIDE_LOGOS: Partial<
   Record<AreaConfig['key'], { label: string; src: string }>
 > = {
+  studio: { label: 'Studio MiRA Praxis', src: studioLogo },
   booking: { label: 'MIRA Info Center', src: infoCenterLogo },
   academy: { label: 'MIRA Academy', src: academyLogo },
   devices: { label: 'MIRA Devices', src: devicesLogo },
@@ -200,7 +203,7 @@ const EXPERIENCE_SIDE_LOGOS: Partial<
   charity: { label: 'MIRA For Life', src: forLifeLogo },
 }
 
-const CENTER_LOGO = { label: 'MIRA CENTER', src: '/logo_full.png' }
+const CENTER_LOGO = { label: 'Center MiRA', src: mainLogo }
 
 const LEGAL_DETAILS = {
   company: readValue(import.meta.env.VITE_LEGAL_COMPANY, HEAD_TITLE),
@@ -1409,7 +1412,7 @@ function App() {
               aria-label="MIRA CENTER home"
               ref={logoRef}
             >
-              <img className="landing-brand__logo" src="/logo_full.png" alt="MIRA logo" />
+              <img className="landing-brand__logo" src={mainLogo} alt="Center MiRA logo" />
             </a>
           </header>
 
@@ -1502,7 +1505,7 @@ function App() {
       <div className="landing-page__content" ref={contentRef}>
         <header className="landing-nav">
           <a className="landing-brand" href={localHref('/', language)} aria-label="MIRA CENTER home" ref={logoRef}>
-            <img className="landing-brand__logo" src="/logo_full.png" alt="MIRA logo" />
+            <img className="landing-brand__logo" src={mainLogo} alt="Center MiRA logo" />
           </a>
         </header>
 

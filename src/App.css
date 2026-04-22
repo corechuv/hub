@@ -253,6 +253,23 @@
   justify-content: center;
   align-self: center;
   justify-self: end;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.experience-card__feature-logo:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.experience-card__feature-logo:focus-visible {
+  outline: 2px solid var(--accent-3);
+  outline-offset: 4px;
+}
+
+.experience-card__feature-logo--mobile-only {
+  display: none;
 }
 
 .experience-card__feature-logo img {
@@ -665,6 +682,14 @@
     row-gap: 1.65rem;
   }
 
+  .experience-card {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      "index content"
+      "feature feature";
+    row-gap: 0.35rem;
+  }
+
   .experience-card--booking,
   .experience-card--academy,
   .experience-card--devices,
@@ -680,22 +705,29 @@
     grid-template-columns: auto minmax(0, 1fr);
     grid-template-areas:
       "index content"
-      "index feature";
+      "feature feature";
   }
 
-  .experience-card--with-feature-logo .experience-card__index {
+  .experience-card__index {
     grid-area: index;
+    font-size: 1.45rem;
+    min-width: 1.85ch;
   }
 
-  .experience-card--with-feature-logo .experience-card__content {
+  .experience-card__content {
     grid-area: content;
   }
 
   .experience-card__feature-logo {
     grid-area: feature;
-    width: clamp(68px, 23vw, 96px);
-    height: clamp(58px, 19vw, 84px);
-    margin-top: 0.45rem;
+    width: clamp(112px, 34vw, 156px);
+    height: clamp(72px, 24vw, 108px);
+    margin-top: 0.6rem;
+    justify-self: center;
+  }
+
+  .experience-card__feature-logo--mobile-only {
+    display: flex;
   }
 
   .landing-nav {
@@ -714,8 +746,7 @@
   }
 
   .experience-card .pill-link {
-    width: 100%;
-    justify-self: stretch;
+    display: none;
   }
 
   .landing-cable {

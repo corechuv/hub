@@ -199,6 +199,8 @@ const EXPERIENCE_SIDE_LOGOS: Partial<
   charity: { label: 'MIRA For Life', src: forLifeLogo },
 }
 
+const CENTER_LOGO = { label: 'MIRA CENTER', src: '/logo_full.png' }
+
 const LEGAL_DETAILS = {
   company: readValue(import.meta.env.VITE_LEGAL_COMPANY, 'CENTER MIRA'),
   address: readValue(import.meta.env.VITE_LEGAL_ADDRESS, 'Germany, European Union'),
@@ -1556,6 +1558,7 @@ function App() {
         <section className="experience-grid" id="core">
           {areas.map((item, index) => {
             const sideLogo = EXPERIENCE_SIDE_LOGOS[item.key]
+            const ctaLogo = sideLogo ?? CENTER_LOGO
 
             return (
               <article
@@ -1579,16 +1582,21 @@ function App() {
                   </a>
                 </div>
 
-                {sideLogo ? (
-                  <span className="experience-card__feature-logo" aria-hidden="true">
-                    <img
-                      src={sideLogo.src}
-                      alt=""
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </span>
-                ) : null}
+                <a
+                  className={`experience-card__feature-logo${
+                    sideLogo ? '' : ' experience-card__feature-logo--mobile-only'
+                  }`}
+                  href={item.href}
+                  aria-label={`${item.cta}: ${item.title}`}
+                  title={ctaLogo.label}
+                >
+                  <img
+                    src={ctaLogo.src}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
               </article>
             )
           })}

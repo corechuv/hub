@@ -151,7 +151,7 @@ const CORE_LINKS = {
   booking: readValue(import.meta.env.VITE_LINK_BOOKING, 'https://booking.center-mira.com'),
   academy: readValue(import.meta.env.VITE_LINK_ACADEMY, 'https://academy.center-mira.com'),
   devices: readValue(import.meta.env.VITE_LINK_DEVICES, 'https://devices.center-mira.com'),
-  shop: readValue(import.meta.env.VITE_LINK_SHOP, 'https://shop.center-mira.com'),
+  shop: readValue(import.meta.env.VITE_LINK_STORE, 'https://store.center-mira.com'),
   ai: readValue(import.meta.env.VITE_LINK_AI, 'https://ai.center-mira.com'),
   charity: readValue(import.meta.env.VITE_LINK_CHARITY, 'https://charity.center-mira.com'),
 }
@@ -494,7 +494,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
         text: 'Beauty salon devices: equipment catalog and working protocols.',
       },
       shop: {
-        title: 'Shop',
+        title: 'Store',
         text: 'Salon store: products, supplies, and professional essentials.',
       },
       ai: {
@@ -660,8 +660,8 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
         text: 'Geräte für den Beauty-Salon: Katalog der Ausstattung und Arbeitsprotokolle.',
       },
       shop: {
-        title: 'Shop',
-        text: 'Salon-Shop: Produkte, Verbrauchsmaterialien und professionelle Artikel.',
+        title: 'Store',
+        text: 'Salon-Store: Produkte, Verbrauchsmaterialien und professionelle Artikel.',
       },
       ai: {
         title: 'AI',
@@ -693,7 +693,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
       legalAria: 'Юридична навігація',
       socialAria: 'Посилання на соцмережі',
       legal: {
-        impressum: 'Impressum',
+        impressum: 'Правова інформація',
         privacy: 'Політика приватності',
         sitemap: 'Sitemap',
       },
@@ -703,9 +703,9 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
       backHome: 'Повернутися до Center MiRA',
       pages: {
         impressum: {
-          title: 'Impressum',
+          title: 'Правова інформація',
           description:
-            'Дані про постачальника сервісу Center MiRA у Німеччині (ЄС).',
+            'Правова інформація про постачальника сервісу Center MiRA у Німеччині (ЄС).',
           sections: [
             {
               title: 'Постачальник послуг',
@@ -825,7 +825,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
         text: 'Апарати для салону краси: каталог обладнання та робочі протоколи.',
       },
       shop: {
-        title: 'Shop',
+        title: 'Store',
         text: 'Магазин для салону: товари, витратні матеріали та професійні позиції.',
       },
       ai: {
@@ -858,7 +858,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
       legalAria: 'Юридическая навигация',
       socialAria: 'Ссылки на соцсети',
       legal: {
-        impressum: 'Impressum',
+        impressum: 'Правовая информация',
         privacy: 'Политика конфиденциальности',
         sitemap: 'Sitemap',
       },
@@ -868,9 +868,9 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
       backHome: 'Вернуться в Center MiRA',
       pages: {
         impressum: {
-          title: 'Impressum',
+          title: 'Правовая информация',
           description:
-            'Данные о поставщике сервиса Center MiRA в Германии (ЕС).',
+            'Правовая информация о поставщике сервиса Center MiRA в Германии (ЕС).',
           sections: [
             {
               title: 'Поставщик услуг',
@@ -990,7 +990,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
         text: 'Аппараты для салона красоты: каталог оборудования и рабочих протоколов.',
       },
       shop: {
-        title: 'Shop',
+        title: 'Store',
         text: 'Магазин для салона: товары, расходники и профессиональные позиции.',
       },
       ai: {

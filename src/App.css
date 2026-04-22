@@ -718,7 +718,7 @@
     max-width: none;
     height: 100%;
     margin: 0;
-    padding: clamp(0.32rem, 1.8vw, 0.54rem);
+    padding: clamp(0.32rem, 4vw, 1rem);
     background: transparent;
   }
 

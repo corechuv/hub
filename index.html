@@ -1,25 +1,25 @@
 <!doctype html>
-<html lang="ru">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="content-language" content="ru" />
-    <meta name="description" content="Center MiRA: навигационная карта экосистемы и переходы в booking, studio, academy и другие разделы." />
-    <meta name="keywords" content="Center MiRA, booking, studio, academy, devices, shop, ai, charity" />
+    <meta name="content-language" content="de" />
+    <meta name="description" content="Center MiRA: Navigationskarte des Systems mit direkten Zugängen zu Booking, Studio, Academy und weiteren Bereichen." />
+    <meta name="keywords" content="Center MiRA, Booking, Studio, Academy, Devices, Store, AI, Charity" />
     <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
     <meta name="author" content="Center MiRA" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Center MiRA" />
     <meta property="og:title" content="Center MiRA" />
-    <meta property="og:description" content="Center MiRA: навигационная карта экосистемы и переходы в booking, studio, academy и другие разделы." />
-    <meta property="og:url" content="https://center-mira.com/?lang=ru" />
+    <meta property="og:description" content="Center MiRA: Navigationskarte des Systems mit direkten Zugängen zu Booking, Studio, Academy und weiteren Bereichen." />
+    <meta property="og:url" content="https://center-mira.com/?lang=de" />
     <meta property="og:image" content="https://center-mira.com/logo_full.png" />
-    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:locale" content="de_DE" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Center MiRA" />
-    <meta name="twitter:description" content="Center MiRA: навигационная карта экосистемы и переходы в booking, studio, academy и другие разделы." />
+    <meta name="twitter:description" content="Center MiRA: Navigationskarte des Systems mit direkten Zugängen zu Booking, Studio, Academy und weiteren Bereichen." />
     <meta name="twitter:image" content="https://center-mira.com/logo_full.png" />
     <meta name="theme-color" content="#0b0d16" />
-    <link rel="canonical" href="https://center-mira.com/?lang=ru" />
+    <link rel="canonical" href="https://center-mira.com/?lang=de" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2" />
     <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
@@ -51,9 +51,8 @@
           var storedLanguage = normalizeLanguageCode(
             window.localStorage.getItem(LANGUAGE_STORAGE_KEY)
           )
-          var browserLanguage = normalizeLanguageCode(window.navigator.language)
-          var nextLanguage = queryLanguage || storedLanguage || browserLanguage || 'ru'
-          var locale = localeByLanguage[nextLanguage] || 'ru-RU'
+          var nextLanguage = queryLanguage || storedLanguage || 'de'
+          var locale = localeByLanguage[nextLanguage] || 'de-DE'
 
           document.documentElement.setAttribute('lang', locale)
           document.documentElement.setAttribute('xml:lang', locale)
@@ -63,8 +62,8 @@
             contentLanguageMeta.setAttribute('content', nextLanguage)
           }
         } catch (error) {
-          document.documentElement.setAttribute('lang', 'ru-RU')
-          document.documentElement.setAttribute('xml:lang', 'ru-RU')
+          document.documentElement.setAttribute('lang', 'de-DE')
+          document.documentElement.setAttribute('xml:lang', 'de-DE')
         }
       })()
     </script>

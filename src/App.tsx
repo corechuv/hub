@@ -364,9 +364,9 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
       legalAria: 'Legal navigation',
       socialAria: 'Social links',
       legal: {
-        impressum: 'Impressum',
+        impressum: 'Legal Notice',
         privacy: 'Privacy Policy',
-        sitemap: 'Sitemap',
+        sitemap: 'Site Map',
       },
     },
     legal: {
@@ -374,15 +374,15 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
       backHome: 'Back to Center MiRA',
       pages: {
         impressum: {
-          title: 'Impressum',
-          description: 'Provider information for Center MiRA in Germany (EU).',
+          title: 'Legal Notice',
+          description: 'Provider information and legal notice for Center MiRA in Germany (EU).',
           sections: [
             {
               title: 'Provider',
               paragraphs: [
                 `${LEGAL_DETAILS.company}`,
                 `Registered seat: ${LEGAL_DETAILS.address}`,
-                'Business area: digital center navigation and subdomain routing.',
+                'Scope of activity: digital center navigation and routing to subdomains.',
               ],
             },
             {
@@ -411,7 +411,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
               title: 'Liability notice',
               paragraphs: [
                 'We are responsible for our own content according to general laws.',
-                'No liability is assumed for external links; their operators are solely responsible.',
+                'External links lead to third-party content; their operators are solely responsible for that content.',
               ],
             },
           ],
@@ -432,8 +432,8 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
             {
               title: 'Data we process',
               paragraphs: [
-                'Server log data (IP, date/time, requested URL, user agent) for secure operation.',
-                'Language preference in local storage key: center-mira-language.',
+                'Server log data (IP address, date/time, requested URL, User-Agent) for secure operation.',
+                'Language preference in Local Storage key: center-mira-language.',
               ],
               list: [
                 'No account registration on this landing page.',
@@ -445,7 +445,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
               title: 'Purpose and legal basis',
               paragraphs: [
                 'Service delivery and technical security: Art. 6(1)(f) GDPR.',
-                'Persisting selected language for usability: Art. 6(1)(f) GDPR.',
+                'Saving the selected language for usability: Art. 6(1)(f) GDPR.',
                 'If optional tracking tools are enabled in the future, consent is required under Art. 6(1)(a) GDPR and Section 25 TDDDG.',
               ],
             },
@@ -453,20 +453,20 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
               title: 'Storage and deletion',
               paragraphs: [
                 'Server logs are stored only as long as needed for operations and security.',
-                'Local storage language value remains until removed by the user or browser reset.',
+                'The Local Storage language value remains until it is removed by the user or by a browser reset.',
               ],
             },
             {
               title: 'Your rights',
               paragraphs: [
-                'You may request access, rectification, erasure, restriction, portability, and object under Arts. 15-21 GDPR.',
+                'You may request access, rectification, erasure, restriction, portability, and object to processing under Arts. 15–21 GDPR.',
                 'You may lodge a complaint with your supervisory authority in the EU, especially in Germany where the service is operated.',
               ],
             },
           ],
         },
         sitemap: {
-          title: 'Sitemap',
+          title: 'Site Map',
           description: 'Complete navigation map of the center and linked subdomain systems.',
           sections: {
             center: 'Center pages',
@@ -528,7 +528,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
       socialAria: 'Soziale Links',
       legal: {
         impressum: 'Impressum',
-        privacy: 'Datenschutz',
+        privacy: 'Datenschutzerklärung',
         sitemap: 'Sitemap',
       },
     },
@@ -617,7 +617,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
             {
               title: 'Speicherdauer',
               paragraphs: [
-                'Server-Logs werden nur so lange gespeichert, wie es fuer Betrieb und Sicherheit notwendig ist.',
+                'Server-Logs werden nur so lange gespeichert, wie es für Betrieb und Sicherheit notwendig ist.',
                 'Der Local-Storage-Eintrag zur Sprache bleibt bis zur Löschung durch den Nutzer oder Browser-Reset.',
               ],
             },
@@ -695,7 +695,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
       legal: {
         impressum: 'Правова інформація',
         privacy: 'Політика приватності',
-        sitemap: 'Sitemap',
+        sitemap: 'Карта сайту',
       },
     },
     legal: {
@@ -712,7 +712,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
               paragraphs: [
                 `${LEGAL_DETAILS.company}`,
                 `Місцезнаходження: ${LEGAL_DETAILS.address}`,
-                'Сфера діяльності: цифрова навігація центру та переходи на субдомени.',
+                'Сфера діяльності: цифрова навігація центру та переходи до субдоменних систем.',
               ],
             },
             {
@@ -727,7 +727,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
               title: 'Відповідальний за контент',
               paragraphs: [
                 `${LEGAL_DETAILS.responsiblePerson}`,
-                'Відповідальною особою за редакційний контент (за наявності) є особа згідно з §18 Abs. 2 MStV.',
+                'Відповідальна особа за редакційний контент (за наявності) визначається згідно з § 18 Abs. 2 MStV.',
               ],
             },
             {
@@ -767,8 +767,8 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
                 'Налаштування мови в local storage за ключем center-mira-language.',
               ],
               list: [
-                'На цьому лендінгу немає реєстрації акаунта.',
-                'На цьому лендінгу немає процесу оплати.',
+                'На цій сторінці немає реєстрації акаунта.',
+                'На цій сторінці немає процесу оплати.',
                 'Переходи на субдомени ведуть у незалежні системи.',
               ],
             },
@@ -777,7 +777,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
               paragraphs: [
                 'Технічне надання сервісу та безпека: Art. 6(1)(f) GDPR.',
                 'Збереження вибраної мови для зручності: Art. 6(1)(f) GDPR.',
-                'Якщо в майбутньому буде підключено необовʼязкові трекери, потрібна згода за Art. 6(1)(a) GDPR та §25 TDDDG.',
+                'Якщо в майбутньому буде підключено необовʼязкові трекери, потрібна згода за Art. 6(1)(a) GDPR та § 25 TDDDG.',
               ],
             },
             {
@@ -790,14 +790,14 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
             {
               title: 'Ваші права',
               paragraphs: [
-                'Ви маєте права на доступ, виправлення, видалення, обмеження, перенесення та заперечення (Art. 15-21 GDPR).',
+                'Ви маєте право на доступ, виправлення, видалення, обмеження, перенесення даних і заперечення (Art. 15–21 GDPR).',
                 'Ви можете подати скаргу до наглядового органу з захисту даних в ЄС, зокрема в Німеччині.',
               ],
             },
           ],
         },
         sitemap: {
-          title: 'Sitemap',
+          title: 'Карта сайту',
           description: 'Повна карта навігації центру та підключених субдоменів.',
           sections: {
             center: 'Сторінки центру',
@@ -860,7 +860,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
       legal: {
         impressum: 'Правовая информация',
         privacy: 'Политика конфиденциальности',
-        sitemap: 'Sitemap',
+        sitemap: 'Карта сайта',
       },
     },
     legal: {
@@ -892,7 +892,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
               title: 'Ответственный за контент',
               paragraphs: [
                 `${LEGAL_DETAILS.responsiblePerson}`,
-                'Ответственный за редакционные материалы (при наличии) определяется в соответствии с §18 Abs. 2 MStV.',
+                'Ответственный за редакционные материалы (при наличии) определяется в соответствии с § 18 Abs. 2 MStV.',
               ],
             },
             {
@@ -942,7 +942,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
               paragraphs: [
                 'Техническая работа сервиса и безопасность: Art. 6(1)(f) GDPR.',
                 'Сохранение выбранного языка для удобства: Art. 6(1)(f) GDPR.',
-                'При подключении необязательных трекеров требуется согласие по Art. 6(1)(a) GDPR и §25 TDDDG.',
+                'При подключении необязательных трекеров требуется согласие по Art. 6(1)(a) GDPR и § 25 TDDDG.',
               ],
             },
             {
@@ -955,14 +955,14 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
             {
               title: 'Права пользователя',
               paragraphs: [
-                'Вы имеете право на доступ, исправление, удаление, ограничение, перенос и возражение (Art. 15-21 GDPR).',
+                'Вы имеете право на доступ, исправление, удаление, ограничение, перенос данных и возражение (Art. 15–21 GDPR).',
                 'Вы можете подать жалобу в надзорный орган по защите данных в ЕС, в том числе в Германии.',
               ],
             },
           ],
         },
         sitemap: {
-          title: 'Sitemap',
+          title: 'Карта сайта',
           description: 'Полная карта навигации центра и подключенных субдоменов.',
           sections: {
             center: 'Страницы центра',
@@ -1400,7 +1400,7 @@ function App() {
     ]
 
     return (
-      <main className="landing-page">
+      <main className="landing-page" translate="no">
         <div className="landing-page__content" ref={contentRef}>
           <header className="landing-nav">
             <a
@@ -1498,7 +1498,7 @@ function App() {
   }
 
   return (
-    <main className="landing-page">
+    <main className="landing-page" translate="no">
       <div className="landing-page__content" ref={contentRef}>
         <header className="landing-nav">
           <a className="landing-brand" href={localHref('/', language)} aria-label="MIRA CENTER home" ref={logoRef}>

@@ -674,16 +674,18 @@
 
 @media (max-width: 820px) {
   .experience-grid {
-    grid-template-columns: 1fr;
-    row-gap: 1.65rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(0.65rem, 3vw, 0.95rem);
+    align-items: stretch;
   }
 
   .experience-card {
-    grid-template-columns: auto minmax(0, 1fr);
-    grid-template-areas:
-      "index content"
-      "feature feature";
-    row-gap: 0.35rem;
+    min-width: 0;
+    min-height: clamp(108px, 32vw, 142px);
+    padding: 0.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .experience-card--booking,
@@ -698,32 +700,38 @@
   }
 
   .experience-card--with-feature-logo {
-    grid-template-columns: auto minmax(0, 1fr);
-    grid-template-areas:
-      "index content"
-      "feature feature";
+    grid-template-columns: none;
   }
 
   .experience-card__index {
-    grid-area: index;
-    font-size: 1.45rem;
-    min-width: 1.85ch;
+    display: none;
   }
 
   .experience-card__content {
-    grid-area: content;
+    display: none;
   }
 
   .experience-card__feature-logo {
-    grid-area: feature;
-    width: clamp(112px, 34vw, 156px);
-    height: clamp(72px, 24vw, 108px);
-    margin-top: 0.6rem;
-    justify-self: center;
+    width: 100%;
+    max-width: clamp(128px, 42vw, 168px);
+    height: clamp(84px, 28vw, 118px);
+    margin: 0;
+    padding: 0.52rem;
+    background: rgba(255, 255, 255, 0.035);
   }
 
   .experience-card__feature-logo--mobile-only {
     display: flex;
+  }
+
+  .experience-card--charity {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - clamp(0.65rem, 3vw, 0.95rem)) / 2);
+  }
+
+  .experience-card:hover {
+    transform: none;
   }
 
   .experience-card__feature-logo:hover {

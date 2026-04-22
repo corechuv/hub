@@ -674,8 +674,8 @@
 
 @media (max-width: 820px) {
   .experience-grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(31vw, 118px), min(31vw, 118px)));
-    gap: clamp(0.85rem, 4vw, 1.35rem);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(0.7rem, 3.2vw, 1.1rem);
     align-items: stretch;
     justify-content: center;
   }

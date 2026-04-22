@@ -23,6 +23,7 @@ import type {
 const LANGUAGE_STORAGE_KEY = 'center-mira-language'
 const LEGAL_UPDATED_AT = '2026-04-20'
 const SHOW_HOME_HERO = false
+const HEAD_TITLE = 'Center MiRA'
 
 const localeByLanguage: Record<LanguageCode, string> = {
   en: 'en-US',
@@ -55,7 +56,7 @@ const normalizeLanguageCode = (value: string | null | undefined): LanguageCode |
 
 const getInitialLanguage = (): LanguageCode => {
   if (typeof window === 'undefined') {
-    return 'ru'
+    return 'de'
   }
 
   const queryLanguage = normalizeLanguageCode(
@@ -84,7 +85,7 @@ const getInitialLanguage = (): LanguageCode => {
     return browserLanguage
   }
 
-  return 'ru'
+  return 'de'
 }
 
 const applyDocumentLanguage = (language: LanguageCode) => {
@@ -202,14 +203,14 @@ const EXPERIENCE_SIDE_LOGOS: Partial<
 const CENTER_LOGO = { label: 'MIRA CENTER', src: '/logo_full.png' }
 
 const LEGAL_DETAILS = {
-  company: readValue(import.meta.env.VITE_LEGAL_COMPANY, 'CENTER MIRA'),
+  company: readValue(import.meta.env.VITE_LEGAL_COMPANY, HEAD_TITLE),
   address: readValue(import.meta.env.VITE_LEGAL_ADDRESS, 'Germany, European Union'),
   email: readValue(import.meta.env.VITE_LEGAL_EMAIL, 'legal@center-mira.com'),
   phone: readValue(import.meta.env.VITE_LEGAL_PHONE, '+49 176 717 668 51'),
   website: readValue(import.meta.env.VITE_LEGAL_WEBSITE, 'https://center-mira.com'),
   responsiblePerson: readValue(
     import.meta.env.VITE_LEGAL_RESPONSIBLE_PERSON,
-    'Management Team, CENTER MIRA',
+    'Management Team, Center MiRA',
   ),
 }
 
@@ -315,7 +316,7 @@ const updateAlternateLinks = (routePath: string) => {
   }
 
   const defaultUrl = new URL(routePath, SITE_URL)
-  defaultUrl.searchParams.set('lang', 'ru')
+  defaultUrl.searchParams.set('lang', 'de')
   const defaultLink = document.createElement('link')
   defaultLink.setAttribute('rel', 'alternate')
   defaultLink.setAttribute('hreflang', 'x-default')
@@ -344,7 +345,7 @@ const upsertJsonLd = (payload: object) => {
 
 const COPY: Record<LanguageCode, LocalizedCopy> = {
   en: {
-    heroTitle: 'Center Hub',
+    heroTitle: 'Center MiRA',
     heroDescription: 'System navigation map.',
     openSections: 'Open sections',
     goCta: 'Go',
@@ -370,11 +371,11 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
     },
     legal: {
       updatedPrefix: 'Updated',
-      backHome: 'Back to Center Hub',
+      backHome: 'Back to Center MiRA',
       pages: {
         impressum: {
           title: 'Impressum',
-          description: 'Provider information for CENTER MIRA in Germany (EU).',
+          description: 'Provider information for Center MiRA in Germany (EU).',
           sections: [
             {
               title: 'Provider',
@@ -477,7 +478,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
     },
     areas: {
       studio: {
-        title: 'Studio',
+        title: 'Studio MiRA Praxis',
         text: 'Visual showcase of the center: atmosphere, style, and service format.',
       },
       booking: {
@@ -497,7 +498,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
         text: 'Salon store: products, supplies, and professional essentials.',
       },
       ai: {
-        title: 'Ai',
+        title: 'AI',
         text: 'AI support module: hints, scenarios, and routine automation.',
       },
       charity: {
@@ -507,7 +508,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
     },
   },
   de: {
-    heroTitle: 'Center Hub',
+    heroTitle: 'Center MiRA',
     heroDescription: 'Navigationskarte des Systems.',
     openSections: 'Bereiche öffnen',
     goCta: 'Weiter',
@@ -533,19 +534,19 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
     },
     legal: {
       updatedPrefix: 'Stand',
-      backHome: 'Zurück zum Center Hub',
+      backHome: 'Zurück zum Center MiRA',
       pages: {
         impressum: {
           title: 'Impressum',
           description:
-            'Anbieterkennzeichnung für CENTER MIRA in Deutschland (EU).',
+            'Anbieterkennzeichnung für Center MiRA in Deutschland (EU).',
           sections: [
             {
               title: 'Diensteanbieter',
               paragraphs: [
                 `${LEGAL_DETAILS.company}`,
                 `Sitz: ${LEGAL_DETAILS.address}`,
-                'Taetigkeitsbereich: digitale Zentrumsnavigation und Weiterleitung zu Subdomains.',
+                'Tätigkeitsbereich: digitale Zentrumsnavigation und Weiterleitung zu Subdomains.',
               ],
             },
             {
@@ -557,10 +558,10 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
               ],
             },
             {
-              title: 'Verantwortlich fuer Inhalte',
+              title: 'Verantwortlich für Inhalte',
               paragraphs: [
                 `${LEGAL_DETAILS.responsiblePerson}`,
-                'Verantwortlich gemaess § 18 Abs. 2 MStV fuer redaktionelle Inhalte (soweit vorhanden).',
+                'Verantwortlich gemäß § 18 Abs. 2 MStV für redaktionelle Inhalte (soweit vorhanden).',
               ],
             },
             {
@@ -573,8 +574,8 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
             {
               title: 'Haftungshinweis',
               paragraphs: [
-                'Fuer eigene Inhalte sind wir nach den allgemeinen Gesetzen verantwortlich.',
-                'Fuer Inhalte externer Links sind ausschliesslich deren Betreiber verantwortlich.',
+                'Für eigene Inhalte sind wir nach den allgemeinen Gesetzen verantwortlich.',
+                'Für Inhalte externer Links sind ausschließlich deren Betreiber verantwortlich.',
               ],
             },
           ],
@@ -597,34 +598,34 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
               title: 'Verarbeitete Daten',
               paragraphs: [
                 'Server-Logdaten (IP-Adresse, Datum/Uhrzeit, aufgerufene URL, User-Agent) zur technischen Bereitstellung und Sicherheit.',
-                'Sprachauswahl im Local Storage unter dem Schluessel center-mira-language.',
+                'Sprachauswahl im Local Storage unter dem Schlüssel center-mira-language.',
               ],
               list: [
                 'Keine Kontoanlage auf dieser Landingpage.',
                 'Kein Checkout auf dieser Landingpage.',
-                'Weiterleitungen zu Subdomains erfolgen in eigenstaendige Systeme.',
+                'Weiterleitungen zu Subdomains erfolgen in eigenständige Systeme.',
               ],
             },
             {
               title: 'Zweck und Rechtsgrundlage',
               paragraphs: [
                 'Technischer Betrieb und Sicherheit: Art. 6 Abs. 1 lit. f DSGVO.',
-                'Merken der Spracheinstellung fuer bessere Nutzbarkeit: Art. 6 Abs. 1 lit. f DSGVO.',
-                'Bei optionalen Tracking-Tools ist zusaetzlich eine Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 TDDDG erforderlich.',
+                'Merken der Spracheinstellung für bessere Nutzbarkeit: Art. 6 Abs. 1 lit. f DSGVO.',
+                'Bei optionalen Tracking-Tools ist zusätzlich eine Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 TDDDG erforderlich.',
               ],
             },
             {
               title: 'Speicherdauer',
               paragraphs: [
                 'Server-Logs werden nur so lange gespeichert, wie es fuer Betrieb und Sicherheit notwendig ist.',
-                'Der Local-Storage-Eintrag zur Sprache bleibt bis zur Loeschung durch den Nutzer oder Browser-Reset.',
+                'Der Local-Storage-Eintrag zur Sprache bleibt bis zur Löschung durch den Nutzer oder Browser-Reset.',
               ],
             },
             {
               title: 'Ihre Rechte',
               paragraphs: [
-                'Sie haben Rechte auf Auskunft, Berichtigung, Loeschung, Einschraenkung, Datenuebertragbarkeit und Widerspruch (Art. 15-21 DSGVO).',
-                'Sie koennen sich bei einer Datenschutzaufsichtsbehoerde in der EU beschweren, insbesondere in Deutschland.',
+                'Sie haben Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO).',
+                'Sie können sich bei einer Datenschutzaufsichtsbehörde in der EU beschweren, insbesondere in Deutschland.',
               ],
             },
           ],
@@ -632,7 +633,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
         sitemap: {
           title: 'Sitemap',
           description:
-            'Vollstaendige Navigationskarte des Zentrums und der verlinkten Subdomain-Systeme.',
+            'Vollständige Navigationskarte des Zentrums und der verlinkten Subdomain-Systeme.',
           sections: {
             center: 'Center-Seiten',
             subdomains: 'Subdomain-Systeme',
@@ -643,7 +644,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
     },
     areas: {
       studio: {
-        title: 'Studio',
+        title: 'Studio MiRA Praxis',
         text: 'Visuelle Präsentation des Zentrums: Atmosphäre, Stil und Serviceformat.',
       },
       booking: {
@@ -663,7 +664,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
         text: 'Salon-Shop: Produkte, Verbrauchsmaterialien und professionelle Artikel.',
       },
       ai: {
-        title: 'Ai',
+        title: 'AI',
         text: 'AI-Modul zur Unterstützung: Hinweise, Szenarien und Automatisierung von Routinen.',
       },
       charity: {
@@ -673,7 +674,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
     },
   },
   uk: {
-    heroTitle: 'Center Hub',
+    heroTitle: 'Center MiRA',
     heroDescription: 'Навігаційна карта системи.',
     openSections: 'Відкрити розділи',
     goCta: 'Перейти',
@@ -699,12 +700,12 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
     },
     legal: {
       updatedPrefix: 'Оновлено',
-      backHome: 'Повернутися до Center Hub',
+      backHome: 'Повернутися до Center MiRA',
       pages: {
         impressum: {
           title: 'Impressum',
           description:
-            'Дані про постачальника сервісу CENTER MIRA у Німеччині (ЄС).',
+            'Дані про постачальника сервісу Center MiRA у Німеччині (ЄС).',
           sections: [
             {
               title: 'Постачальник послуг',
@@ -808,7 +809,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
     },
     areas: {
       studio: {
-        title: 'Studio',
+        title: 'Studio MiRA Praxis',
         text: 'Візуальна вітрина центру: атмосфера, стиль і сервісний формат.',
       },
       booking: {
@@ -828,7 +829,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
         text: 'Магазин для салону: товари, витратні матеріали та професійні позиції.',
       },
       ai: {
-        title: 'Ai',
+        title: 'AI',
         text: 'AI-модуль для асистування: підказки, сценарії й автоматизація рутини.',
       },
       charity: {
@@ -838,7 +839,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
     },
   },
   ru: {
-    heroTitle: 'Center Hub',
+    heroTitle: 'Center MiRA',
     heroDescription: 'Навигационная карта системы.',
     openSections: 'Открыть разделы',
     goCta: 'Перейти',
@@ -864,12 +865,12 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
     },
     legal: {
       updatedPrefix: 'Обновлено',
-      backHome: 'Вернуться в Center Hub',
+      backHome: 'Вернуться в Center MiRA',
       pages: {
         impressum: {
           title: 'Impressum',
           description:
-            'Данные о поставщике сервиса CENTER MIRA в Германии (ЕС).',
+            'Данные о поставщике сервиса Center MiRA в Германии (ЕС).',
           sections: [
             {
               title: 'Поставщик услуг',
@@ -973,7 +974,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
     },
     areas: {
       studio: {
-        title: 'Studio',
+        title: 'Studio MiRA Praxis',
         text: 'Визуальная витрина центра: атмосфера, оформление и сервисный формат.',
       },
       booking: {
@@ -993,7 +994,7 @@ const COPY: Record<LanguageCode, LocalizedCopy> = {
         text: 'Магазин для салона: товары, расходники и профессиональные позиции.',
       },
       ai: {
-        title: 'Ai',
+        title: 'AI',
         text: 'AI-модуль для ассистирования: подсказки, сценарии и автоматизация рутины.',
       },
       charity: {
@@ -1188,7 +1189,7 @@ function App() {
       return
     }
 
-    const fullTitle = `${pageTitle} | ${LEGAL_DETAILS.company}`
+    const fullTitle = HEAD_TITLE
     const canonical = new URL(routePath, SITE_URL)
     canonical.searchParams.set('lang', language)
     const canonicalHref = canonical.toString()
@@ -1546,7 +1547,7 @@ function App() {
               <li className="landing-metrics__qr">
                 <img
                   src="/center-mira-qrcode.svg"
-                  alt="Center MIRA QR code"
+                  alt="Center MiRA QR code"
                   loading="lazy"
                   decoding="async"
                 />
@@ -1577,7 +1578,12 @@ function App() {
                 <div className="experience-card__content">
                   <h2 className="experience-card__title">{item.title}</h2>
                   <span className="experience-card__text">{item.text}</span>
-                  <a className="pill-link pill-link--ghost" href={item.href}>
+                  <a
+                    className="pill-link pill-link--ghost"
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     {item.cta}
                   </a>
                 </div>
@@ -1587,6 +1593,8 @@ function App() {
                     sideLogo ? '' : ' experience-card__feature-logo--mobile-only'
                   }`}
                   href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
                   aria-label={`${item.cta}: ${item.title}`}
                   title={ctaLogo.label}
                 >

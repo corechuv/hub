@@ -22,6 +22,7 @@ import type {
 
 const LANGUAGE_STORAGE_KEY = 'center-mira-language'
 const LEGAL_UPDATED_AT = '2026-04-20'
+const SHOW_HOME_HERO = false
 
 const localeByLanguage: Record<LanguageCode, string> = {
   en: 'en-US',
@@ -1514,41 +1515,43 @@ function App() {
           </svg>
         ) : null}
 
-        <section className="landing-hero" id="top">
-          <div className="landing-hero__copy">
-            <h1 className="landing-hero__title">{copy.heroTitle}</h1>
-            <p className="landing-hero__description">{copy.heroDescription}</p>
+        {SHOW_HOME_HERO ? (
+          <section className="landing-hero" id="top">
+            <div className="landing-hero__copy">
+              <h1 className="landing-hero__title">{copy.heroTitle}</h1>
+              <p className="landing-hero__description">{copy.heroDescription}</p>
 
-            <div className="landing-hero__cta">
-              <a href="#core" className="pill-link pill-link--ghost">
-                {copy.openSections}
-              </a>
+              <div className="landing-hero__cta">
+                <a href="#core" className="pill-link pill-link--ghost">
+                  {copy.openSections}
+                </a>
+              </div>
             </div>
-          </div>
 
-          <ul className="landing-metrics" aria-label={copy.metricsAria}>
-            <li>
-              <strong>9</strong>
-              <span>{copy.metrics.ecosystem}</span>
-            </li>
-            <li>
-              <strong>1</strong>
-              <span>{copy.metrics.centerEntry}</span>
-            </li>
-            <li>
-              <strong>24/7</strong>
-              <span>{copy.metrics.access}</span>
-            </li>
-            <li className="landing-metrics__qr">
-              <img
-                src="/center-mira-qrcode.svg"
-                alt="Center MIRA QR code"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-          </ul>
-        </section>
+            <ul className="landing-metrics" aria-label={copy.metricsAria}>
+              <li>
+                <strong>9</strong>
+                <span>{copy.metrics.ecosystem}</span>
+              </li>
+              <li>
+                <strong>1</strong>
+                <span>{copy.metrics.centerEntry}</span>
+              </li>
+              <li>
+                <strong>24/7</strong>
+                <span>{copy.metrics.access}</span>
+              </li>
+              <li className="landing-metrics__qr">
+                <img
+                  src="/center-mira-qrcode.svg"
+                  alt="Center MIRA QR code"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </li>
+            </ul>
+          </section>
+        ) : null}
 
         <section className="experience-grid" id="core">
           {areas.map((item, index) => {

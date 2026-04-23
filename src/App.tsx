@@ -158,6 +158,8 @@ const CORE_LINKS = {
   charity: readValue(import.meta.env.VITE_LINK_CHARITY, 'https://charity.center-mira.com'),
 }
 
+const MAIN_LOGO_LINK = CORE_LINKS.studio
+
 const SOCIAL_LINKS = [
   {
     key: 'instagram',
@@ -217,8 +219,7 @@ const LEGAL_DETAILS = {
   ),
 }
 
-const AREA_ORDER = [
-  'studio',
+const HOME_AREA_ORDER = [
   'booking',
   'academy',
   'devices',
@@ -1078,7 +1079,7 @@ function App() {
         },
       ]
 
-      for (const key of AREA_ORDER) {
+      for (const key of HOME_AREA_ORDER) {
         const card = cardRefs.current[key]
         if (!card) {
           return
@@ -1112,7 +1113,7 @@ function App() {
       const observedElements = [
         contentRef.current,
         logoRef.current,
-        ...AREA_ORDER.map((key) => cardRefs.current[key]),
+        ...HOME_AREA_ORDER.map((key) => cardRefs.current[key]),
       ]
       observedElements.forEach((element) => {
         if (element) {
@@ -1135,6 +1136,7 @@ function App() {
     text: copy.areas[item.key].text,
     cta: copy.goCta,
   }))
+  const homeAreas = areas.filter((item) => item.key !== 'studio')
 
   const updatedAt = new Intl.DateTimeFormat(localeByLanguage[language], {
     day: '2-digit',
@@ -1408,8 +1410,8 @@ function App() {
           <header className="landing-nav">
             <a
               className="landing-brand"
-              href={localHref('/', language)}
-              aria-label="MIRA CENTER home"
+              href={MAIN_LOGO_LINK}
+              aria-label="Open Studio MiRA Praxis"
               ref={logoRef}
             >
               <img className="landing-brand__logo" src={mainLogo} alt="Center MiRA logo" />
@@ -1504,7 +1506,7 @@ function App() {
     <main className="landing-page" translate="no">
       <div className="landing-page__content" ref={contentRef}>
         <header className="landing-nav">
-          <a className="landing-brand" href={localHref('/', language)} aria-label="MIRA CENTER home" ref={logoRef}>
+          <a className="landing-brand" href={MAIN_LOGO_LINK} aria-label="Open Studio MiRA Praxis" ref={logoRef}>
             <img className="landing-brand__logo" src={mainLogo} alt="Center MiRA logo" />
           </a>
         </header>
@@ -1560,7 +1562,7 @@ function App() {
         ) : null}
 
         <section className="experience-grid" id="core">
-          {areas.map((item, index) => {
+          {homeAreas.map((item, index) => {
             const sideLogo = EXPERIENCE_SIDE_LOGOS[item.key]
             const ctaLogo = sideLogo ?? CENTER_LOGO
 

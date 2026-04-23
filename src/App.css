@@ -302,39 +302,34 @@
   justify-self: start;
 }
 
-.experience-card--studio {
+.experience-card--booking {
   grid-column: 1;
   grid-row: 1;
 }
 
-.experience-card--booking {
+.experience-card--academy {
   grid-column: 2;
   grid-row: 2;
 }
 
-.experience-card--academy {
+.experience-card--devices {
   grid-column: 1;
   grid-row: 3;
 }
 
-.experience-card--devices {
+.experience-card--shop {
   grid-column: 2;
   grid-row: 4;
 }
 
-.experience-card--shop {
+.experience-card--ai {
   grid-column: 1;
   grid-row: 5;
 }
 
-.experience-card--ai {
+.experience-card--charity {
   grid-column: 2;
   grid-row: 6;
-}
-
-.experience-card--charity {
-  grid-column: 1;
-  grid-row: 7;
 }
 
 .landing-social {
@@ -695,8 +690,7 @@
   .experience-card--devices,
   .experience-card--shop,
   .experience-card--ai,
-  .experience-card--charity,
-  .experience-card--studio {
+  .experience-card--charity {
     grid-column: auto;
     grid-row: auto;
   }

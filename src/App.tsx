@@ -158,7 +158,7 @@ const CORE_LINKS = {
   charity: readValue(import.meta.env.VITE_LINK_CHARITY, 'https://charity.center-mira.com'),
 }
 
-const MAIN_LOGO_LINK = CORE_LINKS.studio
+const MAIN_LOGO_LINK = '/presentations/studio.pdf'
 
 const SOCIAL_LINKS = [
   {
@@ -1171,20 +1171,20 @@ function App() {
       (
         route === 'home'
           ? [
-              LEGAL_DETAILS.company,
-              copy.heroTitle,
-              ...areas.map((item) => item.title),
-              copy.footer.legal.impressum,
-              copy.footer.legal.privacy,
-              copy.footer.legal.sitemap,
-            ]
+            LEGAL_DETAILS.company,
+            copy.heroTitle,
+            ...areas.map((item) => item.title),
+            copy.footer.legal.impressum,
+            copy.footer.legal.privacy,
+            copy.footer.legal.sitemap,
+          ]
           : [
-              LEGAL_DETAILS.company,
-              pageTitle,
-              copy.footer.legal.impressum,
-              copy.footer.legal.privacy,
-              copy.footer.legal.sitemap,
-            ]
+            LEGAL_DETAILS.company,
+            pageTitle,
+            copy.footer.legal.impressum,
+            copy.footer.legal.privacy,
+            copy.footer.legal.sitemap,
+          ]
       ).filter((item) => item.trim().length > 0),
     ),
   ).join(', ')
@@ -1411,7 +1411,9 @@ function App() {
             <a
               className="landing-brand"
               href={MAIN_LOGO_LINK}
-              aria-label="Open Studio MiRA Praxis"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open Studio MiRA presentation PDF"
               ref={logoRef}
             >
               <img className="landing-brand__logo" src={mainLogo} alt="Center MiRA logo" />
@@ -1506,7 +1508,14 @@ function App() {
     <main className="landing-page" translate="no">
       <div className="landing-page__content" ref={contentRef}>
         <header className="landing-nav">
-          <a className="landing-brand" href={MAIN_LOGO_LINK} aria-label="Open Studio MiRA Praxis" ref={logoRef}>
+          <a
+            className="landing-brand"
+            href={MAIN_LOGO_LINK}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open Studio MiRA presentation PDF"
+            ref={logoRef}
+          >
             <img className="landing-brand__logo" src={mainLogo} alt="Center MiRA logo" />
           </a>
         </header>
@@ -1569,9 +1578,8 @@ function App() {
             return (
               <article
                 key={item.key}
-                className={`experience-card experience-card--${item.key}${
-                  sideLogo ? ' experience-card--with-feature-logo' : ''
-                }`}
+                className={`experience-card experience-card--${item.key}${sideLogo ? ' experience-card--with-feature-logo' : ''
+                  }`}
                 ref={(node) => {
                   cardRefs.current[item.key] = node
                 }}
@@ -1594,9 +1602,8 @@ function App() {
                 </div>
 
                 <a
-                  className={`experience-card__feature-logo${
-                    sideLogo ? '' : ' experience-card__feature-logo--mobile-only'
-                  }`}
+                  className={`experience-card__feature-logo${sideLogo ? '' : ' experience-card__feature-logo--mobile-only'
+                    }`}
                   href={item.href}
                   target="_blank"
                   rel="noreferrer"
